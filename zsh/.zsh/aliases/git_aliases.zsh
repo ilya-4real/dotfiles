@@ -1,0 +1,6 @@
+alias gs="git status"
+alias gcm="git commit -m"
+alias gaa="git add --all"
+alias gchb="git checkout"
+alias gpsh="git push"
+alias gpll="git pull"
