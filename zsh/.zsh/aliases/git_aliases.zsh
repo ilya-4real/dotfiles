@@ -1,4 +1,4 @@
-alias gs="git status"
+alias gss="git status"
 alias gcm="git commit -m"
 alias gaa="git add --all"
 alias gchb="git checkout"

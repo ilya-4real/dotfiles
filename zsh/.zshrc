@@ -33,6 +33,7 @@ alias py='python'
 alias grep='rg'
 alias docker_stop='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias ls='eza'
+source .zsh/aliases/git_aliases.zsh
 
 # pdm setup
 #
