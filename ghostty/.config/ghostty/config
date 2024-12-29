@@ -1,0 +1,33 @@
+background-opacity = 0.97
+window-decoration = false
+
+font-family = FiraCode Nerd Font
+font-size = 13
+
+
+theme = "iTerm2 Default"
+
+
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+
+keybind = alt+s=new_split:down
+keybind = alt+v=new_split:right
+
+keybind = alt+c=close_surface
+
+keybind = alt+f=toggle_fullscreen
+
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+
+
+window-padding-y = 1
+window-padding-x = 1
+window-theme = ghostty
+window-height = 32
+window-width = 116
+

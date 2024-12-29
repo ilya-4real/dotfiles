@@ -59,3 +59,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # anti dpi variable
 export PATH=$PATH:~/.spoofdpi/bin
 alias spoofy="spoofdpi --enable-doh --window-size 0"
+
+# scripts
+source ~/.zsh/custom/py_env_activate.sh
+activate_pyenv

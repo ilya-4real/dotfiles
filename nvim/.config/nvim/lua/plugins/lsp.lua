@@ -13,7 +13,7 @@ return {
 					capabilites = capabilities,
 					basedpyright = {
 						analysis = {
-							exclude = {"**/.venv","env*", ".env", "**/venv", "**/__pycache__", "**/node_modules" },
+							exclude = {"**/.venv","env*", ".env", "**/venv", "**/__pycache__", "**/node_modules", "/usr/lib/node_modules/" },
 							typeCheckingMode = "standard",
 							autoSearchPaths = true,
 							useLibraryCodeForTypes=true,
