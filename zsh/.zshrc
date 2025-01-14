@@ -3,6 +3,7 @@ eval "$(starship init zsh)"
 export PATH=/home/ilya/.local/bin:$PATH
 
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # History set up
 export HISTFILE=~/.config/.zshhist
@@ -62,4 +63,5 @@ alias spoofy="spoofdpi --enable-doh --window-size 0"
 
 # scripts
 source ~/.zsh/custom/py_env_activate.sh
+source ~/.zsh/custom/env_loader.sh
 activate_pyenv

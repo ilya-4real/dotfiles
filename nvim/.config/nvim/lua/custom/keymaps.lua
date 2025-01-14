@@ -23,6 +23,9 @@ vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format() end)
 vim.keymap.set("n", "<leader>/", "gcc", {remap = true})
 vim.keymap.set("n", "<leader>d", "gcc", {remap = true})
 vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.hover() end)
+vim.keymap.set("n", "<leader>th", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
 
 
 -- best keymaps ever
@@ -58,3 +61,8 @@ vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
 
 
+-- git keymaps
+vim.keymap.set("n", "<leader>gs",":Git<CR>")
+vim.keymap.set("n", "<leader>gb",":Git branch<CR>")
+vim.keymap.set("n", "<leader>gb",":Git blame<CR>")
+vim.keymap.set("n", "<leader>gl",":Git log --graph<CR>")

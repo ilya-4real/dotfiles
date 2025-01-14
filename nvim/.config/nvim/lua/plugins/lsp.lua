@@ -23,9 +23,14 @@ return {
 					},
 				},
 			}
-			-- lspconfig.ruff.setup{
-				-- capabilities=capabilities,
-			-- }
+			lspconfig.emmet_language_server.setup{
+				capabilities=capabilities,
+			}
+			lspconfig.ruff.setup{
+				on_attach = function(client, bufnr)
+					client.server_capabilities.documentFormattingProvider = true
+				end
+		}
 			lspconfig.rust_analyzer.setup{
 				capabilities=capabilities,
 				settings = {
@@ -38,6 +43,7 @@ return {
 					}
 				}
 			}
+			lspconfig.gopls.setup{}
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
 				callback = function(args)

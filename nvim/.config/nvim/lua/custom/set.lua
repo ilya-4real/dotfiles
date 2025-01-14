@@ -10,6 +10,7 @@ vim.opt.autoindent=true
 vim.opt.clipboard="unnamedplus"
 vim.cmd.colorscheme "onedark"
 vim.opt.mouse='a'
+vim.opt.wrap = false
 
 -- mode is already displayed in statusline
 vim.opt.showmode=false
@@ -29,10 +30,23 @@ vim.opt.splitbelow = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "88"
 
 -- highlight current line
 vim.opt.cursorline = true
 
 -- decrease update time
 vim.opt.updatetime = 300
+
+-- list options
+vim.opt.list = true
+vim.opt.listchars = { trail = '·', eol = '¬', tab = '| ' }
+-- inlay hints config
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client.supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
+      vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+    end
+  end,
+})
