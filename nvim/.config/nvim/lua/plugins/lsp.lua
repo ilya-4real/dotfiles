@@ -43,7 +43,28 @@ return {
 					}
 				}
 			}
-			lspconfig.gopls.setup{}
+			lspconfig.gopls.setup{
+				capabilities= vim.tbl_deep_extend(
+					"force", {}, require('cmp_nvim_lsp').default_capabilities(), lspconfig.gopls.capabilities or {}
+				),
+				filetypes ={ "go", "gomod", "gowork", "gotmpl" },
+				settings = {
+					gopls = {
+					completeUnimported=true,
+					usePlaceholders=true,
+						hints = {
+							assignVariableTypes = true,
+							compositeLiteralFields = true,
+							compositeLiteralTypes = true,
+							constantValues = true,
+							functionTypeParameters = true,
+							parameterNames = false,
+							rangeVariableTypes = true
+						},
+					semanticTokens=true
+					}
+				}
+			}
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
 				callback = function(args)
