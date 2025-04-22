@@ -38,6 +38,11 @@ vim.opt.cursorline = true
 -- decrease update time
 vim.opt.updatetime = 300
 
+-- folds configuration
+vim.opt.foldlevel = 20
+vim.opt.foldmethod='expr'
+vim.opt.foldexpr="nvim_treesitter#foldexpr()"
+
 -- list options
 vim.opt.list = true
 vim.opt.listchars = { trail = '·', eol = '¬', tab = '| ' }

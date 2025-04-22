@@ -6,6 +6,6 @@ vim.keymap.set("n", "<leader>pf", function ()
 	}
 end
 )
-vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>sw", builtin.grep_string, {})
+vim.keymap.set("n", "<leader>sg", builtin.live_grep, {desc="Telescope live grep"})
+vim.keymap.set("n", "<leader>sw", builtin.grep_string, {desc="Telescope grep string"})
 

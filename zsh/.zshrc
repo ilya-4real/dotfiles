@@ -10,6 +10,9 @@ export HISTFILE=~/.config/.zshhist
 export HISTSIZE=1000
 export SAVEHIST=1000
 
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 # history options
 setopt HIST_IGNORE_ALL_DUPS
 
