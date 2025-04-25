@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set({"n", "v"}, "<leader>Y", '"+y', {desc="Yank to clipboard"})
+vim.keymap.set("n", "<leader>P", '"+p', {desc="Paste from clipboard"})
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
@@ -15,12 +17,12 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {noremap=true, silent=
 vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, {desc="Signature help"})
 vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end)
 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end)
-vim.keymap.set("n", "<leader>rf",  vim.lsp.buf.references, {noremap=true, silent=true}, {desc="References"})
+vim.keymap.set("n", "<leader>rf",  vim.lsp.buf.references, {noremap=true, silent=true,desc="References"})
 vim.keymap.set("n", "<leader>ws", function() vim.lsp.buf.workspace_symbol() end)
 vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, {desc="Diagnostic"})
 vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {desc="Code actions"})
 vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format() end, {desc="Format buffer"})
-vim.keymap.set("n", "<leader>/", "gcc", {remap = true}, {desc="Comment line"})
+vim.keymap.set("n", "<leader>/", "gcc", {remap = true, desc="Comment line"})
 vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.hover() end, {desc="Hover with docs"})
 vim.keymap.set("n", "<leader>th", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -43,13 +45,14 @@ vim.keymap.set({"n","t"}, "<leader>j", function() ToggleTerminal() end, {desc="T
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- go to previous file
-vim.keymap.set("n", "<leader>-", "<C-^>")
+vim.keymap.set("n", "<leader>-", "<C-^>", {desc="Previous buffer"})
 
 -- insert mode escape remap
 vim.keymap.set("i", "jk", "<esc>")
 
 -- haproon
 local harpoon = require("harpoon")
+-- some comment
 
 vim.keymap.set("n", "<leader>u", function() harpoon:list():add() end, {desc="Harpoon add file"})
 vim.keymap.set("n", "<leader>i", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, {desc="Harpoon quick menu"})
@@ -64,4 +67,6 @@ vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, {desc=
 vim.keymap.set("n", "<leader>gs",":Git<CR>", {desc="Git status"})
 vim.keymap.set("n", "<leader>gb",":Git branch<CR>", {desc="Git branch"})
 vim.keymap.set("n", "<leader>gm",":Git blame<CR>", {desc="Git blame"})
+vim.keymap.set("n", "<leader>gd",":Gvdiffsplit<CR>", {desc="Git diff"})
 vim.keymap.set("n", "<leader>gl",":Git log --graph<CR>", {desc="Git log"})
+

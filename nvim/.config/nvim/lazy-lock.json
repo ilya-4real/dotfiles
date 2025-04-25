@@ -6,6 +6,7 @@
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
+  "gitsigns.nvim": { "branch": "main", "commit": "140ac646db125904e456e42ab8b538d28f9607d7" },
   "gruvbox.nvim": { "branch": "main", "commit": "68c3460a5d1d1a362318960035c9f3466d5011f5" },
   "harpoon": { "branch": "harpoon2", "commit": "a84ab829eaf3678b586609888ef52f7779102263" },
   "kanagawa.nvim": { "branch": "master", "commit": "988082eb00b845e4afbcaa4fd8e903da8a3ab3b9" },
@@ -29,5 +30,6 @@
   "trouble.nvim": { "branch": "main", "commit": "6f380b8826fb819c752c8fd7daaee9ef96d4c689" },
   "vim-be-good": { "branch": "master", "commit": "0ae3de14eb8efc6effe7704b5e46495e91931cc5" },
   "vim-fugitive": { "branch": "master", "commit": "d74a7cff4cfcf84f83cc7eccfa365488f3bbabc2" },
+  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "zen-mode.nvim": { "branch": "main", "commit": "863f150ca321b3dd8aa1a2b69b5f411a220e144f" }
 }
