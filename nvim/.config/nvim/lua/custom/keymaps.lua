@@ -13,7 +13,7 @@ vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>")
 
 -- lsp related keymaps
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {noremap=true, silent=true, desc="Rename variable"})
-vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {noremap=true, silent=true, desc="Go to definition"})
+vim.keymap.set("n", "<leader>df", vim.lsp.buf.definition, {noremap=true, silent=true, desc="Go to definition"})
 vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, {desc="Signature help"})
 vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end)
 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end)
@@ -68,5 +68,5 @@ vim.keymap.set("n", "<leader>gs",":Git<CR>", {desc="Git status"})
 vim.keymap.set("n", "<leader>gb",":Git branch<CR>", {desc="Git branch"})
 vim.keymap.set("n", "<leader>gm",":Git blame<CR>", {desc="Git blame"})
 vim.keymap.set("n", "<leader>gd",":Gvdiffsplit<CR>", {desc="Git diff"})
-vim.keymap.set("n", "<leader>gl",":Git log --graph<CR>", {desc="Git log"})
+vim.keymap.set("n", "<leader>gl",":Git log --graph --pretty=format:'%Cred%h%Creset -% C(yellow) %d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all<CR>", {desc="Git log"})
 
