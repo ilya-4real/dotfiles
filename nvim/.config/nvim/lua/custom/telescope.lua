@@ -6,6 +6,6 @@ vim.keymap.set("n", "<leader>pf", function ()
 	}
 end, {desc="find files"}
 )
-vim.keymap.set("n", "<leader>sg", builtin.live_grep, {desc="Telescope live grep"})
-vim.keymap.set("n", "<leader>sw", builtin.grep_string, {desc="Telescope grep string"})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {desc="Telescope live grep"})
+vim.keymap.set("n", "<leader>fw", builtin.grep_string, {desc="Telescope grep word under the cursor"})
 
