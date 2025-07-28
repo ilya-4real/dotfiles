@@ -10,6 +10,11 @@ vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>")
 
 
+-- split kemaps
+vim.keymap.set("n", "<leader>sv", "<cmd>vs<CR>", {desc="Split vertically"})
+vim.keymap.set("n", "<leader>sh", "<cmd>sp<CR>", {desc="Split horizontally"})
+
+
 
 -- lsp related keymaps
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {noremap=true, silent=true, desc="Rename variable"})
@@ -39,6 +44,7 @@ local neotest = require("neotest")
 vim.keymap.set("n", "<leader>rt", function() neotest.run.run() end, {desc="Run the test under cursor"})
 vim.keymap.set("n", "<leader>ts", function() neotest.summary.toggle() end, {desc="Test summary"})
 vim.keymap.set("n", "<leader>to", function() neotest.output.open({enter=true}) end, {desc="Test output"})
+vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end, {desc="Run tests in current file"})
 
 -- toggle terminal
 vim.keymap.set({"n","t"}, "<leader>j", function() ToggleTerminal() end, {desc="Terminal toggle"})
@@ -71,3 +77,5 @@ vim.keymap.set("n", "<leader>gd",":Gvdiffsplit<CR>", {desc="Git diff"})
 vim.keymap.set("n", "<leader>gh", ":0Gclog<CR>", {desc="Git show history of a file"})
 vim.keymap.set("n", "<leader>gl",":Git log --graph --decorate --oneline --abbrev-commit --date=relative --all<CR>", {desc="Git log", silent=true})
 
+-- Undotree config
+vim.keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>", {desc="Toggle undo tree"})

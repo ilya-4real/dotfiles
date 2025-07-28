@@ -13,7 +13,7 @@ return {
 					capabilites = capabilities,
 					basedpyright = {
 						analysis = {
-							exclude = {"**/.venv","env*", ".env", "**/venv", "**/__pycache__", "**/node_modules", "/usr/lib/node_modules/" },
+							exclude = {"**/.venv","env*", "**/.nox/**", ".env", "**/venv", "**/__pycache__", "**/node_modules", "/usr/lib/node_modules/" },
 							typeCheckingMode = "standard",
 							autoSearchPaths = true,
 							useLibraryCodeForTypes=true,
@@ -22,6 +22,39 @@ return {
 						},
 					},
 				},
+			-- lspconfig.pylsp.setup{
+			-- 	capabilities = capabilities,
+			-- 	settings = {
+			-- 		pylsp = {
+			-- 			plugins = {
+			-- 				pylsp_mypy = {
+			-- 					enable = true,
+			-- 					live_mode=false,
+			-- 					report_progress=true,
+			-- 					-- dmypy=true,
+			-- 					-- strict=true,
+			-- 					follow_imports="normal"
+			-- 				},
+			-- 				jedi_completion = {enable = true},
+			-- 				preload = { enabled = true },  -- Faster startup
+			-- 			}
+			-- 		}
+					-- pylsp_mypy = {
+					-- 	enabled = true,
+					-- 	strict = true,
+					-- 	live_mode = false,  -- Requires file save to update
+					-- 	overrides = {"--show-error-codes", "--disallow-any-generics"},
+					-- },
+					-- jedi_completion = { enabled = true },
+					-- jedi_hover = { enabled = true },
+					-- jedi_references = { enabled = true },
+					-- jedi_signature_help = { enabled = true },
+					-- jedi_symbols = { enabled = true },
+					--
+					-- -- Advanced features
+					-- rope_completion = { enabled = true },
+					-- mccabe = { enabled = true },  -- Code complexity
+					-- pylint = { enabled = false },  
 			}
 			lspconfig.emmet_language_server.setup{
 				capabilities=capabilities,

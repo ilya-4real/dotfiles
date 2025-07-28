@@ -17,4 +17,12 @@ return {
 		opts ={style = "deep", transparent=false},
 	},
 	"rebelot/kanagawa.nvim",
+	{
+		"shaunsingh/solarized.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function() 
+			vim.opt.termguicolors = true
+		end,
+	}
 }

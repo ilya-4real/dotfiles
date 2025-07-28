@@ -1,0 +1,134 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Iosevka Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #333;
+    color: #dcd7ba; /* Kanagawa fujiWhite */
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: #16161d; /* Kanagawa sumiInk0 */
+    color: #dcd7ba; /* Kanagawa fujiWhite */
+    border-radius: 4px;
+    margin: 4px 2px;
+}
+
+#workspaces button.focused {
+    background: #223249; /* Kanagawa waveBlue1 */
+    color: #7e9cd8; /* Kanagawa crystalBlue */
+}
+
+#workspaces button.urgent {
+    background: #e82424; /* Kanagawa samuraiRed */
+    color: #16161d; /* Kanagawa sumiInk0 */
+}
+
+#workspaces button:hover {
+    background: #363646; /* Kanagawa sumiInk1 */
+    box-shadow: inherit;
+}
+
+#mode {
+    background: #e82424; /* Kanagawa samuraiRed */
+    color: #16161d; /* Kanagawa sumiInk0 */
+    padding: 0 8px;
+    border-radius: 4px;
+    margin: 4px 2px;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode, #idle_inhibitor, #custom-media, #custom-power {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    background: #16161d; /* Kanagawa sumiInk0 */
+}
+
+#clock {
+    color: #957fb8; /* Kanagawa springViolet1 */
+}
+
+#battery {
+    color: #76946a; /* Kanagawa waveAqua1 */
+}
+
+#battery.charging {
+    color: #98bb6c; /* Kanagawa springGreen */
+}
+
+@keyframes blink {
+    to {
+        background-color: #e82424; /* Kanagawa samuraiRed */
+        color: #16161d; /* Kanagawa sumiInk0 */
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #e82424; /* Kanagawa samuraiRed */
+    color: #16161d; /* Kanagawa sumiInk0 */
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color: #7fb4ca; /* Kanagawa waveBlue2 */
+}
+
+#memory {
+    color: #c0a36e; /* Kanagawa carpYellow */
+}
+
+#network {
+    color: #7e9cd8; /* Kanagawa crystalBlue */
+}
+
+#network.disconnected {
+    color: #e82424; /* Kanagawa samuraiRed */
+}
+
+#pulseaudio {
+    color: #a3d4d5; /* Kanagawa lightBlue */
+}
+
+#pulseaudio.muted {
+    color: #727169; /* Kanagawa fujiGray */
+}
+
+#tray {
+    color: #dcd7ba; /* Kanagawa fujiWhite */
+}
+
+#idle_inhibitor {
+    color: #e6c384; /* Kanagawa fujiYellow */
+}
+
+#idle_inhibitor.activated {
+    color: #c0a36e; /* Kanagawa carpYellow */
+}
+
+#custom-media {
+    color: #76946a; /* Kanagawa waveAqua1 */
+    min-width: 100px;
+}
+
+#custom-power {
+    color: #e82424; /* Kanagawa samuraiRed */
+    margin-right: 6px;
+}
+
+tooltip {
+    background: #16161d; /* Kanagawa sumiInk0 */
+    border: 1px solid #54546d; /* Kanagawa waveBlue1 */
+}
+
+tooltip label {
+    color: #dcd7ba; /* Kanagawa fujiWhite */
+}

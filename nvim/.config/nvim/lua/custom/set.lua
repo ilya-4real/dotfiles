@@ -43,6 +43,10 @@ vim.opt.foldlevel = 20
 vim.opt.foldmethod='expr'
 vim.opt.foldexpr="nvim_treesitter#foldexpr()"
 
+-- spell checker configuration
+-- vim.opt.spell = true
+-- vim.opt.spelllang = 'en_us'
+
 -- list options
 vim.opt.list = true
 vim.opt.listchars = { trail = '·', eol = '¬', tab = '| ' }
