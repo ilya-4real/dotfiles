@@ -60,7 +60,7 @@ vim.keymap.set("i", "jk", "<esc>")
 local harpoon = require("harpoon")
 -- some comment
 
-vim.keymap.set("n", "<leader>u", function() harpoon:list():add() end, {desc="Harpoon add file"})
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, {desc="Harpoon add file"})
 vim.keymap.set("n", "<leader>i", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, {desc="Harpoon quick menu"})
 
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, {desc="Harpoon option 1"})
