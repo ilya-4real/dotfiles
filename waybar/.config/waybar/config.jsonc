@@ -7,10 +7,8 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
+        "hyprland/workspaces"
+        // "custom/media"
     ],
     "modules-center": [
         // "hyprland/window"
@@ -29,9 +27,9 @@
         "keyboard-state",
         "hyprland/language",
         "battery",
-        "battery#bat2",
+        // "battery#bat2",
         // "clock",
-        // "tray",
+        "tray",
         "custom/power"
     ],
     // Modules configuration
@@ -104,7 +102,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 16,
         "spacing": 10
     },
     "clock": {

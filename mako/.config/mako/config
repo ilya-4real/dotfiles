@@ -6,12 +6,14 @@ border-size=2
 padding=10
 margin=10
 width=300
-height=100
+height=150
 border-radius=4
-progress-color=#89b4fa
+progress-color=over #89b4fa
+icons=1
+max-icon-size=32
 
 # Behavior
-default-timeout=5000
+# default-timeout=5000
 max-visible=5
 anchor=top-right
 layer=overlay
