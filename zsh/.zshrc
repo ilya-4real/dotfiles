@@ -68,3 +68,5 @@ alias spoofy="spoofdpi --enable-doh --window-size 0"
 source ~/.zsh/custom/py_env_activate.sh
 source ~/.zsh/custom/env_loader.sh
 activate_pyenv
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"

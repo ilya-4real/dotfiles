@@ -22,6 +22,7 @@ return {
 						},
 					},
 				},
+
 			-- lspconfig.pylsp.setup{
 			-- 	capabilities = capabilities,
 			-- 	settings = {
@@ -58,6 +59,12 @@ return {
 			}
 			lspconfig.emmet_language_server.setup{
 				capabilities=capabilities,
+			}
+			lspconfig.elixirls.setup {
+				capabilities=capabilities,
+				cmd = { "/home/ilya/elxrls/language_server.sh" },  -- uses the installed binary
+				filetypes = { "elixir", "eelixir", "heex" },
+				root_dir = lspconfig.util.root_pattern("mix.exs", ".git"),
 			}
 			lspconfig.ruff.setup{
 				on_attach = function(client, bufnr)

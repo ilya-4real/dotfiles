@@ -8,7 +8,7 @@ vim.opt.shiftwidth=4
 vim.opt.smartindent=true
 vim.opt.autoindent=true
 -- vim.opt.clipboard="unnamedplus"
-vim.cmd.colorscheme "onedark"
+vim.cmd.colorscheme "gruvbox"
 vim.opt.mouse='a'
 vim.opt.wrap = false
 

@@ -1,0 +1,18 @@
+[user]
+	name = Ilya-4real
+	email = ilya.chernishyov@gmail.com
+	signingkey = 5768F1C80D7A174232525D9BADA5B2C55E6A2C8F
+[commit]
+	gpgsign = true
+[core]
+	editor = nvim
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -% C(yellow) %d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+[merge]
+	tool = fugitive
+[mergetool "fugitive"]
+	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+[init]
+	defaultBranch = main
+[status]
+	showStash = true
